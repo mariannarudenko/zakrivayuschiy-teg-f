@@ -94,7 +94,8 @@
 }
 
 .header,
-.button__text {
+.button__text,
+.content__watermark {
   font-family: "PressStart2P";
 }
 
@@ -165,6 +166,20 @@
   content: "▶";
   position: absolute;
   inset-inline-start: -6px;
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    inset-inline-start: -10px;
+  }
 }
 
 .content {
@@ -186,11 +201,42 @@
 
 .content__title {
   padding: 3px 10px;
+  border-bottom: 2px solid currentColor;
 
   font-variation-settings: "wght" var(--font-main-weight-accent, 785);
   line-height: 122.2%;
+}
 
-  border-bottom: 2px solid currentColor;
+.content__image-watermark {
+  position: relative;
+  z-index: 0;
+}
+
+.content__watermark {
+  position: absolute;
+  z-index: 1;
+
+  inset-block-start: 25px;
+  inset-inline-end: clamp(0.8125rem, -0.0637rem + 3.7383vw, 1.5625rem);
+
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 var(--background-color, #000), 0 1px var(--background-color, #000), 1px 0 var(--background-color, #000), 0 -1px var(--background-color, #000);
+
+  font-size: 14px;
+
+  opacity: 50%;
+}
+
+@supports ((text-stroke: 1px var(--background-color, #000)) or (-webkit-text-stroke: 1px var(--background-color, #000))) {
+  p {
+    -webkit-text-stroke: 1px var(--background-color, #000);
+    text-stroke: 1px var(--background-color, #000);
+    text-shadow: none;
+  }
+}
+
+.content__watermark-accent {
+  text-transform: uppercase;
 }
 
 .content__image {
@@ -248,7 +294,9 @@
 }
 
 .content__image-grayscale {
- filter: grayscale(40%)  drop-shadow(-40px -40px 10px var(--color-accent, #00cc14)) drop-shadow(-40px -15px 10px #FF1493);
+  filter: grayscale(40%)
+    drop-shadow(-40px -40px 10px var(--color-accent, #00cc14))
+    drop-shadow(-40px -15px 10px #ff1493);
 }
 
 .content__image-brightness {
@@ -286,6 +334,6 @@
 }
 
 .footer__icon-button {
-  padding: 18.5px 21px;
   margin-inline: 34.5px;
+  padding: 18.5px 21px;
 }
