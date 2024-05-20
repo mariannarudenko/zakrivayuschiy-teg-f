@@ -21,7 +21,7 @@
 .page,
 .header,
 .content__paragraph,
-.footer__icon-button  {
+.footer__icon-button {
   background-color: var(--background-color, #000);
 }
 
@@ -176,13 +176,18 @@
 }
 
 .content__paragraph {
+  overflow: hidden;
+}
+
+.content__title,
+.content__text {
+  font-size: 18px;
 }
 
 .content__title {
   padding: 3px 10px;
 
   font-variation-settings: "wght" var(--font-main-weight-accent, 785);
-  font-size: 18px;
   line-height: 122.2%;
 
   border-bottom: 2px solid currentColor;
@@ -192,14 +197,81 @@
   inline-size: 100%;
 }
 
+.content__image-blur {
+  filter: grayscale(20%) brightness(140%) blur(5px);
+}
+
+.content__image-sepia {
+  filter: saturate(140%) sepia(70%);
+}
+
+.content__image-invert {
+  filter: invert(100%);
+}
+
+.content__image-gradient {
+  background: repeating-radial-gradient(
+      circle at top left,
+      #f00,
+      #f00 4em,
+      transparent 4em,
+      transparent 15em
+    ),
+    repeating-radial-gradient(
+      circle at top right,
+      #0f0,
+      #0f0 4em,
+      transparent 4em,
+      transparent 15em
+    ),
+    repeating-radial-gradient(
+      circle at bottom right,
+      #ff0,
+      #ff0 4em,
+      transparent 4em,
+      transparent 15em
+    ),
+    repeating-radial-gradient(
+      circle at bottom left,
+      #00f,
+      #00f 4em,
+      transparent 4em,
+      transparent 15em
+    ),
+    #fff;
+
+  background-blend-mode: difference;
+}
+
+.content__image-opacity {
+  filter: opacity(70%);
+}
+
+.content__image-grayscale {
+ filter: grayscale(40%)  drop-shadow(-40px -40px 10px var(--color-accent, #00cc14)) drop-shadow(-40px -15px 10px #FF1493);
+}
+
+.content__image-brightness {
+  filter: brightness(40%) contrast(105%);
+}
+
+.content__image-saturate {
+  filter: saturate(110%);
+}
+
 .content__text {
-  padding: 25px;
+  padding: 25px 25px 0;
+}
+
+.content__text-accent {
+  font-style: italic;
 }
 
 .card__icon-button {
   align-self: flex-end;
   gap: 12px;
 
+  margin-block-start: 25px;
   padding-inline-end: 25px;
 }
 
