@@ -20,7 +20,7 @@
 
 .page,
 .header,
-.content__paragraph,
+.card__paragraph,
 .footer__icon-button {
   background-color: var(--background-color, #000);
 }
@@ -28,23 +28,23 @@
 .page,
 .header,
 .theme-menu__list,
-.content__list,
-.content__paragraph,
-.card__icon-button {
+.card__list,
+.card__paragraph,
+.button-group {
   display: flex;
 }
 
 .page,
 .header,
 .theme-menu__list,
-.content__list,
-.content__paragraph {
+.card__list,
+.card__paragraph {
   flex-direction: column;
 }
 
 .page,
 .header,
-.card__icon-button {
+.button-group {
   align-items: center;
 }
 
@@ -82,20 +82,20 @@
 }
 
 .header,
-.content__paragraph,
+.card__paragraph,
 .card__like-button,
 .footer__icon-button {
   border: 2px solid currentColor;
 }
 
 .header,
-.content {
+.card {
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 }
 
 .header,
 .button__text,
-.content__watermark {
+.card__watermark {
   font-family: "PressStart2P";
 }
 
@@ -125,11 +125,11 @@
 }
 
 .theme-menu {
-  margin-inline-start: 5%;
+  margin-inline-start: 2.5%;
 }
 
 .theme-menu__list,
-.card__icon-button {
+.button-group {
   padding-block-end: 25px;
 }
 
@@ -145,74 +145,114 @@
 
 .theme-menu__button,
 .card__icon-button {
-  background-color: transparent;
   border: none;
+}
+
+.theme-menu__button,
+.card__icon-button,
+.card__like-button {
+  background-color: transparent;
 }
 
 .theme-menu__button {
   position: relative;
+  transition: color 0.5s;
 }
 
-.theme-menu__button:focus {
+.theme-menu__button:focus,
+.theme-menu__button:hover,
+.theme-menu__button:disabled,
+.theme-menu__button:focus-visible {
+  transition: 0.5s ease-in-out;
+  opacity: 60%;
+}
+
+.theme-menu__button:focus,
+.card__icon-button:focus,
+.card__like-button:focus,
+.button__text:focus,
+.footer__icon-button:focus {
   outline: none;
 }
 
-.theme-menu__button:hover,
 .theme-menu__button:disabled {
-  opacity: 60%;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
+
   position: absolute;
-  inset-inline-start: -6px;
-  animation-name: loading;
+
+  inset-inline-start: -10px;
+
+  animation-name: active;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
 }
 
-@keyframes loading {
+.theme-menu__button::after {
+  content: "";
+
+  display: block;
+
+  inline-size: 0%;
+  block-size: 2px;
+  margin-top: 3px;
+
+  background-color: currentColor;
+
+  transition: inline-size 0.5s;
+}
+
+.theme-menu__button:focus-visible::after {
+  inline-size: 100%;
+}
+
+@keyframes active {
   0% {
-    rotate: 0deg;
+    inset-inline-start: -10px;
   }
 
   100% {
-    inset-inline-start: -10px;
+    inset-inline-start: -14px;
   }
 }
 
-.content {
+.card {
   margin-block-start: 50px;
 }
 
-.content__list {
+.card__list {
   gap: 50px;
 }
 
-.content__paragraph {
+.card__paragraph {
   overflow: hidden;
 }
 
-.content__title,
-.content__text {
+.card__title,
+.card__text {
   font-size: 18px;
 }
 
-.content__title {
+.card__title {
   padding: 3px 10px;
-  border-bottom: 2px solid currentColor;
 
   font-variation-settings: "wght" var(--font-main-weight-accent, 785);
   line-height: 122.2%;
+
+  border-bottom: 2px solid currentColor;
 }
 
-.content__image-watermark {
+.card__image-watermark {
   position: relative;
   z-index: 0;
 }
 
-.content__watermark {
+.card__watermark {
   position: absolute;
   z-index: 1;
 
@@ -220,14 +260,19 @@
   inset-inline-end: clamp(0.8125rem, -0.0637rem + 3.7383vw, 1.5625rem);
 
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--background-color, #000), 0 1px var(--background-color, #000), 1px 0 var(--background-color, #000), 0 -1px var(--background-color, #000);
+  text-shadow: -1px 0 var(--background-color, #000),
+    0 1px var(--background-color, #000), 1px 0 var(--background-color, #000),
+    0 -1px var(--background-color, #000);
 
   font-size: 14px;
 
   opacity: 50%;
 }
 
-@supports ((text-stroke: 1px var(--background-color, #000)) or (-webkit-text-stroke: 1px var(--background-color, #000))) {
+@supports (
+  (text-stroke: 1px var(--background-color, #000)) or
+    (-webkit-text-stroke: 1px var(--background-color, #000))
+) {
   p {
     -webkit-text-stroke: 1px var(--background-color, #000);
     text-stroke: 1px var(--background-color, #000);
@@ -235,27 +280,27 @@
   }
 }
 
-.content__watermark-accent {
+.card__watermark-accent {
   text-transform: uppercase;
 }
 
-.content__image {
+.card__image {
   inline-size: 100%;
 }
 
-.content__image-blur {
+.card__image-blur {
   filter: grayscale(20%) brightness(140%) blur(5px);
 }
 
-.content__image-sepia {
+.card__image-sepia {
   filter: saturate(140%) sepia(70%);
 }
 
-.content__image-invert {
+.card__image-invert {
   filter: invert(100%);
 }
 
-.content__image-gradient {
+.card__image-gradient {
   background: repeating-radial-gradient(
       circle at top left,
       #f00,
@@ -289,33 +334,33 @@
   background-blend-mode: difference;
 }
 
-.content__image-opacity {
+.card__image-opacity {
   filter: opacity(70%);
 }
 
-.content__image-grayscale {
+.card__image-grayscale {
   filter: grayscale(40%)
     drop-shadow(-40px -40px 10px var(--color-accent, #00cc14))
     drop-shadow(-40px -15px 10px #ff1493);
 }
 
-.content__image-brightness {
+.card__image-brightness {
   filter: brightness(40%) contrast(105%);
 }
 
-.content__image-saturate {
+.card__image-saturate {
   filter: saturate(110%);
 }
 
-.content__text {
+.card__text {
   padding: 25px 25px 0;
 }
 
-.content__text-accent {
+.card__text-accent {
   font-style: italic;
 }
 
-.card__icon-button {
+.button-group {
   align-self: flex-end;
   gap: 12px;
 
@@ -324,16 +369,67 @@
 }
 
 .card__like-button {
+  position: relative;
+  z-index: 1;
+
   padding: 12.5px 37px;
+  
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--color-accent, #00cc14);
+}
+
+@supports (
+  (text-stroke: 2px 2px 0 var(--color-accent, #00cc14)) or
+    (-webkit-text-stroke: 2px 2px 0 var(--color-accent, #00cc14))
+) {
+  .card__like-button:focus-visible {
+    -webkit-text-stroke: 2px 2px 0 var(--color-accent, #00cc14);
+    text-stroke: 2px 2px 0 var(--color-accent, #00cc14);
+    text-shadow: none;
+  }
+}
+
+.button--accent::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  background-color: var(--color-accent, #00cc14);
+
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button--accent:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  
+  mix-blend-mode: difference;
 }
 
 .footer__icon {
   inline-size: 21px;
   block-size: 21px;
+
   margin-inline-end: 8px;
 }
 
 .footer__icon-button {
+  position: relative;
+
   margin-inline: 34.5px;
   padding: 18.5px 21px;
 }

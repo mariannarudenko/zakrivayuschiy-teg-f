@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="viewport" card="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" card="dark light" />
     <title>Закрывающий тег</title>
     <!-- 32×32 -->
     <link rel="icon" href="favicon.ico" />
@@ -48,15 +48,17 @@
         </ul>
       </nav>
     </header>
-    <main class="content">
-      <ul class="content__list">
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">
-              Фритрек и нулевой спринт: Подготовка к работе
-            </h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;/HTML&gt;</p>
+    <main class="card">
+      <ul class="card__list">
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">
+                Фритрек и нулевой спринт: Подготовка к работе
+              </h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;/HTML&gt;</p>
               <picture>
                 <source
                   srcset="./images/card1_mobile.webp"
@@ -73,62 +75,68 @@
                 />
                 <source srcset="./images/card1_desktop.jpg" />
                 <img
-                  class="content__image"
+                  class="card__image"
                   src="./images/card1_desktop.webp"
                   alt="Сельская дорога уходит в горизонт. По обе стороны от нее зеленеет трава. Раннее утро."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               Это было самое начало пути. На этом этапе важно было проникнуться
               основами и настроиться на учёбу. И, возможно, подумать, как новые
               знания могут повлиять на ваше будущее.
             </p>
-            <p class="content__text content__text-accent">
+            <p class="card__text card__text-accent">
               <q
                 >В наших силах решать только что делать со временем, что нам
                 отпущено</q
               >
               - Гэндальф Серый
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button ">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">1 спринт: Я — чистый лист</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;/HTML&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">1 спринт: Я — чистый лист</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;/HTML&gt;</p>
               <picture>
                 <source
                   srcset="./images/card2_mobile.webp"
@@ -145,64 +153,70 @@
                 />
                 <source srcset="./images/card2_desktop.jpg" />
                 <img
-                  class="content__image content__image-blur"
+                  class="card__image card__image-blur"
                   src="./images/card2_desktop.webp"
                   alt="Вид с каменистого утеса на озеро покрытое бирюзовым льдом. Голубое небо затянуто белыми облаками. Фотография сильно размыта."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               На первых этапах мы работали со страхами и сомнениями, которые
               часто испытывают новички. Один из них — страх перед чистым листом.
               Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто
               за этим ощущением скрываются более глубокие вопросы: с чего
               начать? а вдруг будет слишком сложно? что, если я не справлюсь?
             </p>
-            <p class="content__text content__text-accent">
+            <p class="card__text card__text-accent">
               <q
                 >Опасное это дело, Фродо, выходить за порог: стоит ступить на
                 дорогу и, если дашь волю ногам, неизвестно куда тебя занесет</q
               >
               - Бильбо Бэггинс
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">1 спринт: А если не получится?</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark content__watermark-accent">&lt;css&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">1 спринт: А если не получится?</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark card__watermark-accent">&lt;css&gt;</p>
               <picture>
                 <source
                   srcset="./images/card3_mobile.webp"
@@ -219,18 +233,18 @@
                 />
                 <source srcset="./images/card3_desktop.jpg" />
                 <img
-                  class="content__image content__image-sepia"
+                  class="card__image card__image-sepia"
                   src="./images/card3_desktop.webp"
                   alt='"Крик" с картины Мунка, нарисованный на кофейной пене. На фотографию наложен фильтр сепии, поэтому цвет кофейной пены более песочный и бежевый.'
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               Первый проект — позади! Но это всё ещё самое начало пути. Радость
               могла быстро померкнуть и смениться ожиданием провала. Или вы,
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
-            <p class="content__text content__text-accent">
+            <p class="card__text card__text-accent">
               <q
                 >Если вы хотите взяться за создание чего-то нового и
                 грандиозного, вам не нужны для этого миллионы долларов.
@@ -240,44 +254,50 @@
               >
               - Повелители DOOM
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">2 спринт: Погоня за идеалом</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;desigions&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;desigions&gt;</p>
               <picture>
                 <source
                   srcset="./images/card4_mobile.webp"
@@ -294,64 +314,70 @@
                 />
                 <source srcset="./images/card4_desktop.jpg" />
                 <img
-                  class="content__image content__image-invert"
+                  class="card__image card__image-invert"
                   src="./images/card4_desktop.webp"
                   alt="Каменный пейзаж. На переднем плане составленные друг на друга небольшие камни в форме лепешек. На заднем фоне каменные скалы, сверху видна часть неба. Цвета инвертированны, поэтому небо - оранжевое, а горы - синие."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               На этом этапе вы уже достаточно разбирались в основах вёрстки,
               чтобы понять, как много ещё впереди. Вы могли попытаться погнаться
               за идеалом и понять, что он недостижим. А, может, вы вовсе и не
               подвержены перфекционизму и вместо того, чтобы сделать идеально,
               старались просто сделать.
             </p>
-            <p class="content__text content__text-accent">
+            <p class="card__text card__text-accent">
               <q
                 >...И они приняли рабочую гипотезу, что счастье в непрерывном
                 познании неизвестного и смысл жизни в том же
               </q>
               - Понедельник начинается в субботу
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">2 спринт: О тех, кто рядом</h2>
-            <div class="content__image-watermark content__image-gradient">
-              <p class="content__watermark">care</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
+            </header>
+            <div class="card__image-watermark card__image-gradient">
+              <p class="card__watermark">care</p>
               <picture>
                 <source
                   srcset="./images/card5_mobile.webp"
@@ -368,13 +394,13 @@
                 />
                 <source srcset="./images/card5_desktop.jpg" />
                 <img
-                  class="content__image content__image-opacity"
+                  class="card__image card__image-opacity"
                   src="./images/card5_desktop.webp"
                   alt="Мужчина сидит в компьютерном кресле, играет в приставку, улыбается. На его коленях чихуахуа и кошка. Наложен полупрозрачный калейдоскопический фильтр."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               Всё это время вы были не одиноки (хотя, возможно, иногда и
               чувствовали, что одни против целого мира). Вас окружали
               одногруппники, команда сопровождения и просто близкие люди,
@@ -382,47 +408,53 @@
               поддавался. Осваивать что-то новое легче, когда рядом есть
               единомышленники, не правда ли?
             </p>
-            <p class="content__text">
+            <p class="card__text">
               Место для ваших воспоминаний о начале обучения.
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">3 спринт: Обходные стратегии</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;support&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">3 спринт: Обходные стратегии</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;support&gt;</p>
               <picture>
                 <source
                   srcset="./images/card6_mobile.webp"
@@ -439,58 +471,64 @@
                 />
                 <source srcset="./images/card6_desktop.png" />
                 <img
-                  class="content__image content__image-grayscale"
+                  class="card__image card__image-grayscale"
                   src="./images/card6_desktop.webp"
                   alt="Селфи девушки в зеркало. Девушка в черной кожаной куртке и капюшоне, лицо закрыто телефоном. Применены фильтры с цветными тенями"
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               На этом курсе вы постоянно решали разные задачи. В какой-то момент
               вам могло показаться, что решения просто иссякли. Значит, пришло
               время посмотреть на задачу под другим углом.
             </p>
-            <p class="content__text">
+            <p class="card__text">
               Место для ваших воспоминаний о начале обучения.
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">3 спринт: Когда опускаются руки</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;lifes-style: none;&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;lifes-style: none;&gt;</p>
               <picture>
                 <source
                   srcset="./images/card7_mobile.webp"
@@ -507,60 +545,66 @@
                 />
                 <source srcset="./images/card7_desktop.jpg" />
                 <img
-                  class="content__image content__image-brightness"
+                  class="card__image card__image-brightness"
                   src="./images/card7_desktop.webp"
                   alt="Белый чихуахуа с задумчивой мордочкой лежит рядом со своим плюшевым мишкой."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               Во время учёбы часто возникает чувство, когда не знаешь, за что
               хвататься. Вроде и проектную пора сдавать, и задачи хочется
               порешать, и в теории получше разобраться, и жизнь не забыть
               пожить. В такие моменты очень нужна концентрация. Вспомните,
               откуда вы её черпали.
             </p>
-            <p class="content__text">
+            <p class="card__text">
               Место для ваших воспоминаний о начале обучения.
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
-        <li class="content__list-item">
-          <article class="content__paragraph">
-            <h2 class="content__title">«Сейчас я здесь»</h2>
-            <div class="content__image-watermark">
-              <p class="content__watermark">&lt;experience&gt;</p>
+        <li class="card__list-item">
+          <article class="card__paragraph">
+            <header>
+              <h2 class="card__title">«Сейчас я здесь»</h2>
+            </header>
+            <div class="card__image-watermark">
+              <p class="card__watermark">&lt;experience&gt;</p>
               <picture>
                 <source
                   srcset="./images/card8_mobile.webp"
@@ -577,13 +621,13 @@
                 />
                 <source srcset="./images/card8_desktop.jpg" />
                 <img
-                  class="content__image content__image-saturate"
+                  class="card__image card__image-saturate"
                   src="./images/card8_desktop.webp"
                   alt="На переднем плане фотографии девушка смотрит в камеру, за ее спиной стоит парень. На фоне розовое закатное небо и большая радуга."
                 />
               </picture>
             </div>
-            <p class="content__text">
+            <p class="card__text">
               Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
               Во-первых, впереди ещё много материала про «красотищу». Во-вторых,
               с окончанием курса учёба не заканчивается. Вёрстка — это целый
@@ -591,46 +635,50 @@
               получится, но это тот случай, когда важен сам процесс познания.
               Ведь часто путь — и есть результат.
             </p>
-            <p class="content__text">
+            <p class="card__text">
               Место для ваших воспоминаний о начале обучения.
             </p>
-            <button class="card__icon-button">
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 0H3V3H6V0Z" fill="currentColor" />
-                <path d="M9 0H6V3H9V0Z" fill="currentColor" />
-                <path d="M3 3H0V6H3V3Z" fill="currentColor" />
-                <path d="M3 6H0V9H3V6Z" fill="currentColor" />
-                <path d="M3 9H0V12H3V9Z" fill="currentColor" />
-                <path d="M12 0H9V3H12V0Z" fill="currentColor" />
-                <path d="M6 12H3V15H6V12Z" fill="currentColor" />
-                <path d="M9 15H6V18H9V15Z" fill="currentColor" />
-                <path d="M12 18H9V21H12V18Z" fill="currentColor" />
-                <path d="M21 0H24V3H21V0Z" fill="currentColor" />
-                <path d="M18 0H21V3H18V0Z" fill="currentColor" />
-                <path d="M24 3H27V6H24V3Z" fill="currentColor" />
-                <path d="M24 6H27V9H24V6Z" fill="currentColor" />
-                <path d="M24 9H27V12H24V9Z" fill="currentColor" />
-                <path d="M15 0H18V3H15V0Z" fill="currentColor" />
-                <path d="M21 12H24V15H21V12Z" fill="currentColor" />
-                <path d="M18 15H21V18H18V15Z" fill="currentColor" />
-                <path d="M15 18H18V21H15V18Z" fill="currentColor" />
-                <path d="M15 3H12V6H15V3Z" fill="currentColor" />
-                <path d="M15 21H12V24H15V21Z" fill="currentColor" />
-              </svg>
-              <span class="card__like-button button__text">Like</span>
-            </button>
+            <footer class="button-group">
+              <button type="button" class="card__icon-button">
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 0H3V3H6V0Z" fill="currentColor" />
+                  <path d="M9 0H6V3H9V0Z" fill="currentColor" />
+                  <path d="M3 3H0V6H3V3Z" fill="currentColor" />
+                  <path d="M3 6H0V9H3V6Z" fill="currentColor" />
+                  <path d="M3 9H0V12H3V9Z" fill="currentColor" />
+                  <path d="M12 0H9V3H12V0Z" fill="currentColor" />
+                  <path d="M6 12H3V15H6V12Z" fill="currentColor" />
+                  <path d="M9 15H6V18H9V15Z" fill="currentColor" />
+                  <path d="M12 18H9V21H12V18Z" fill="currentColor" />
+                  <path d="M21 0H24V3H21V0Z" fill="currentColor" />
+                  <path d="M18 0H21V3H18V0Z" fill="currentColor" />
+                  <path d="M24 3H27V6H24V3Z" fill="currentColor" />
+                  <path d="M24 6H27V9H24V6Z" fill="currentColor" />
+                  <path d="M24 9H27V12H24V9Z" fill="currentColor" />
+                  <path d="M15 0H18V3H15V0Z" fill="currentColor" />
+                  <path d="M21 12H24V15H21V12Z" fill="currentColor" />
+                  <path d="M18 15H21V18H18V15Z" fill="currentColor" />
+                  <path d="M15 18H18V21H15V18Z" fill="currentColor" />
+                  <path d="M15 3H12V6H15V3Z" fill="currentColor" />
+                  <path d="M15 21H12V24H15V21Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button type="button" class="card__like-button button--accent">
+                <span class="button__text">Like</span>
+              </button>
+            </footer>
           </article>
         </li>
       </ul>
     </main>
     <footer class="footer">
-      <button class="footer__icon-button">
+      <button type="button" class="footer__icon-button button--accent">
         <svg class="footer__icon">
           <use href="./svg/floppy.svg#icon-floppy"></use>
         </svg>
