@@ -21,13 +21,15 @@
 .page,
 .header,
 .card__paragraph,
-.footer__icon-button {
+.footer__icon-button,
+.dialog {
   background-color: var(--background-color, #000);
 }
 
 .page,
 .header,
 .theme-menu__list,
+.card,
 .card__list,
 .card__paragraph,
 .button-group {
@@ -37,6 +39,7 @@
 .page,
 .header,
 .theme-menu__list,
+.card,
 .card__list,
 .card__paragraph {
   flex-direction: column;
@@ -44,13 +47,17 @@
 
 .page,
 .header,
+.card,
 .button-group {
   align-items: center;
 }
 
-.page {
+.page,
+.card__list {
   gap: 50px;
+}
 
+.page {
   margin-block: 100px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -83,8 +90,11 @@
 
 .header,
 .card__paragraph,
+.card__icon-button:focus-visible,
 .card__like-button,
-.footer__icon-button {
+.footer__icon-button,
+.dialog,
+.dialog__button {
   border: 2px solid currentColor;
 }
 
@@ -95,8 +105,10 @@
 
 .header,
 .button__text,
-.card__watermark {
-  font-family: "PressStart2P";
+.card__watermark,
+.dialog__title,
+.dialog__button {
+  font-family: "PressStart2P", fantasy;
 }
 
 .header {
@@ -115,8 +127,8 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__logo-group__text,
-.theme-menu__button {
+.theme-menu__button,
+.text--accent {
   text-transform: uppercase;
 }
 
@@ -139,7 +151,8 @@
 
 .theme-menu__button,
 .card__icon-button,
-.card__like-button {
+.card__like-button,
+.card__watermark {
   font-size: 14px;
 }
 
@@ -150,12 +163,20 @@
 
 .theme-menu__button,
 .card__icon-button,
-.card__like-button {
+.card__like-button,
+.dialog__button {
   background-color: transparent;
 }
 
-.theme-menu__button {
+.theme-menu__button,
+.card__image-watermark,
+.card__like-button,
+.button__text,
+.footer__icon-button {
   position: relative;
+}
+
+.theme-menu__button {
   transition: color 0.5s;
 }
 
@@ -179,10 +200,14 @@
   pointer-events: none;
 }
 
+.theme-menu__button:disabled::before,
+.card__watermark,
+.button--accent::before {
+  position: absolute;
+}
+
 .theme-menu__button:disabled::before {
   content: "▶";
-
-  position: absolute;
 
   inset-inline-start: -10px;
 
@@ -207,26 +232,14 @@
   transition: inline-size 0.5s;
 }
 
-.theme-menu__button:focus-visible::after {
+.theme-menu__button:focus-visible::after,
+.card__image,
+.button--accent::before {
   inline-size: 100%;
-}
-
-@keyframes active {
-  0% {
-    inset-inline-start: -10px;
-  }
-
-  100% {
-    inset-inline-start: -14px;
-  }
 }
 
 .card {
   margin-block-start: 50px;
-}
-
-.card__list {
-  gap: 50px;
 }
 
 .card__paragraph {
@@ -248,14 +261,16 @@
 }
 
 .card__image-watermark {
-  position: relative;
   z-index: 0;
 }
 
-.card__watermark {
-  position: absolute;
+.card__watermark,
+.card__like-button,
+.button__text {
   z-index: 1;
+}
 
+.card__watermark {
   inset-block-start: 25px;
   inset-inline-end: clamp(0.8125rem, -0.0637rem + 3.7383vw, 1.5625rem);
 
@@ -263,8 +278,6 @@
   text-shadow: -1px 0 var(--background-color, #000),
     0 1px var(--background-color, #000), 1px 0 var(--background-color, #000),
     0 -1px var(--background-color, #000);
-
-  font-size: 14px;
 
   opacity: 50%;
 }
@@ -278,14 +291,6 @@
     text-stroke: 1px var(--background-color, #000);
     text-shadow: none;
   }
-}
-
-.card__watermark-accent {
-  text-transform: uppercase;
-}
-
-.card__image {
-  inline-size: 100%;
 }
 
 .card__image-blur {
@@ -368,56 +373,19 @@
   padding-inline-end: 25px;
 }
 
-.card__like-button {
-  position: relative;
-  z-index: 1;
-
-  padding: 12.5px 37px;
-  
-  transition: box-shadow 0.5s ease-in-out;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--color-accent, #00cc14);
-}
-
-@supports (
-  (text-stroke: 2px 2px 0 var(--color-accent, #00cc14)) or
-    (-webkit-text-stroke: 2px 2px 0 var(--color-accent, #00cc14))
-) {
-  .card__like-button:focus-visible {
-    -webkit-text-stroke: 2px 2px 0 var(--color-accent, #00cc14);
-    text-stroke: 2px 2px 0 var(--color-accent, #00cc14);
-    text-shadow: none;
-  }
-}
-
-.button--accent::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  inline-size: 100%;
-  block-size: 100%;
-
-  background-color: var(--color-accent, #00cc14);
-
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.button--accent:hover::before {
-  transform: scaleX(1);
-}
-
 .button__text {
-  position: relative;
-  z-index: 1;
-  
+  text-align: center;
+}
+
+.button__text,
+.footer__icon{
+  color: var(--color-button, #fff);
   mix-blend-mode: difference;
+}
+
+.footer__icon-button {
+  text-align: center;
+  margin-block-start: 52px;
 }
 
 .footer__icon {
@@ -428,8 +396,52 @@
 }
 
 .footer__icon-button {
-  position: relative;
-
   margin-inline: 34.5px;
   padding: 18.5px 21px;
+}
+
+.dialog {
+  position: fixed;
+  z-index: 1;
+  inset-block-end: 50%;
+  max-inline-size: 353px;
+  color: var(--color-accent, #00cc14);
+  padding: 30px;
+  
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.dialog::backdrop {
+  background-color: #000000bf;
+}
+
+.dialog__title-group {
+  display: flex;
+  column-gap: 20px;
+}
+
+.dialog__icon {
+  align-self: center;
+  justify-self: center;
+  width: 79px;
+  height: 100%;
+}
+
+.dialog__title {
+  display: block;
+  align-self: start;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: start;
+}
+
+.dialog__button {
+  justify-self: flex-start;
+  padding-block: 12.5px;
 }

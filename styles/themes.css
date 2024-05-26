@@ -9,6 +9,7 @@
   --font-main-weight-accent: 785;
 
   --color-accent: #00cc14;
+  --color-button: #00cc14;
 
   --background-color: #000;
   --background-gradient: linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
@@ -18,6 +19,7 @@
   --font-main-weight-accent: 700;
 
   --color-accent: #000;
+  --color-button: #d3d3d3;
 
   --background-color: #d3d3d3;
   --background-gradient: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
@@ -29,6 +31,7 @@
     --font-main-weight-accent: 700;
 
     --color-accent: #000;
+    --color-button: #d3d3d3;
 
     --background-color: #d3d3d3;
     --background-gradient: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
