@@ -1,14 +1,19 @@
 :root {
-  --font-main: "Inter";
-  --font-accent: "PressStart2P";
-  --font-main-weight: 465; 
+  --font-main: 'Inter';
+  --font-accent: 'PressStart2P';
+  --font-main-weight: 465;
   --font-main-weight-accent: 785;
+
   --color-accent: #00cc14;
   --color-fill-like: #f00;
   --color-button: #00cc14;
+  --color-text-button: #00cc14;
+  --color_shadow: #000;
 
-  
   --background-color: #000;
-  --background-gradient: linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+  --background-gradient: linear-gradient(
+    to bottom,
+    #007f0c 0.01%,
+    #004306 100%
+  );
 }
-

@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" card="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" card="dark light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <!-- 32×32 -->
     <link rel="icon" href="favicon.ico" />
@@ -20,10 +20,11 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__logo-group__title">&lt;/HTML&gt;</h1>
-      <p class="header__logo-group__text text-accnet">закрывающий тег</p>
+      <div class="header__group">
+        <h1 class="header__title">&lt;/HTML&gt;</h1>
+        <p class="header__text">закрывающий тег</p>
+      </div>
       <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button type="button" data-theme="dark" class="theme-menu__button">
@@ -86,15 +87,12 @@
               основами и настроиться на учёбу. И, возможно, подумать, как новые
               знания могут повлиять на ваше будущее.
             </p>
-            <!-- <p class="card__text card__text-accent">
+            <p class="card__text card__text-accent">
               <q
                 >В наших силах решать только что делать со временем, что нам
                 отпущено</q
               >
               - Гэндальф Серый
-            </p> -->
-            <p class="card__text">
-              Место для ваших воспоминаний о начале обучения.
             </p>
             <footer class="button-group">
               <button type="button" class="card__icon-button">
@@ -423,8 +421,12 @@
               поддавался. Осваивать что-то новое легче, когда рядом есть
               единомышленники, не правда ли?
             </p>
-            <p class="card__text">
-              Место для ваших воспоминаний о начале обучения.
+            <p class="card__text card__text-accent">
+              <q>Самый лучший способ чему-то научиться - учить других </q>...<q
+                >Второй лучший способ чему-то научиться - совместная работа с
+                другими людьми
+              </q>
+              - Идеальный программист
             </p>
             <footer class="button-group">
               <button type="button" class="card__icon-button">
@@ -500,8 +502,12 @@
               вам могло показаться, что решения просто иссякли. Значит, пришло
               время посмотреть на задачу под другим углом.
             </p>
-            <p class="card__text">
-              Место для ваших воспоминаний о начале обучения.
+            <p class="card__text card__text-accent">
+              <q
+                >Вокруг нас разбросаны ответы на любые вопросы, надо только
+                суметь отыскать их
+              </q>
+              - Дом в котором
             </p>
             <footer class="button-group">
               <button type="button" class="card__icon-button">
@@ -579,8 +585,12 @@
               пожить. В такие моменты очень нужна концентрация. Вспомните,
               откуда вы её черпали.
             </p>
-            <p class="card__text">
-              Место для ваших воспоминаний о начале обучения.
+            <p class="card__text card__text-accent">
+              <q
+                >Если строишь высокую башню, нужно потратить много времени на
+                закладку фундамента
+              </q>
+              - Аристотель &#129299;
             </p>
             <footer class="button-group">
               <button type="button" class="card__icon-button">
@@ -659,8 +669,12 @@
               получится, но это тот случай, когда важен сам процесс познания.
               Ведь часто путь — и есть результат.
             </p>
-            <p class="card__text">
-              Место для ваших воспоминаний о начале обучения.
+            <p class="card__text card__text-accent">
+              <q
+                >Есть разница между тем, кто знает свой путь, и тем, кто идет
+                этим путем
+              </q>
+              - Если все кошки в мире исчезнут
             </p>
             <footer class="button-group">
               <button type="button" class="card__icon-button">
@@ -706,26 +720,32 @@
       <button
         type="button"
         class="footer__icon-button button--accent"
-        onclick="window['dialog-id'].show();"
+        onclick="window['dialog-id'].showModal();"
         aria-controls="dialog-id"
       >
-        <svg class="footer__icon">
+        <svg class="footer__icon" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#icon-floppy"></use>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="footer__button button__text">Сохранить на память</span>
       </button>
     </main>
     <dialog class="dialog" id="dialog-id">
-        <div class="dialog__title-group">
-          <svg class="dialog__icon" viewBox="0 0 21 21">
-            <use href="./svg/floppy.svg#icon-floppy"></use>
-          </svg>
-          <h2 class="dialog__title text--accent">
-            Вставьте дискету, чтобы продолжить
-          </h2>
-        </div>
-        <button type="button" class="dialog__button button--accent" onclick="window['dialog-id'].close();"
-        aria-controls="dialog-id"><span class="button__text text--accent">ок</span></button>
+      <div class="dialog__title-group">
+        <svg class="dialog__icon" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#icon-floppy"></use>
+        </svg>
+        <h2 class="dialog__title text--accent">
+          Вставьте дискету, чтобы продолжить
+        </h2>
+      </div>
+      <button
+        type="button"
+        class="dialog__button button--accent"
+        onclick="window['dialog-id'].close();"
+        aria-controls="dialog-id"
+      >
+        <span class="dialog__text button__text text--accent">ок</span>
+      </button>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>

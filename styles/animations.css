@@ -1,17 +1,30 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+.theme-menu__button {
+  transition: color 0.5s;
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+.theme-menu__button:hover,
+.card__like-button,
+.card__icon-button,
+.footer__button,
+.dialog__button {
+  cursor: pointer;
+}
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
+.theme-menu__button:focus,
+.theme-menu__button:hover,
+.theme-menu__button:disabled,
+.theme-menu__button:focus-visible {
+  transition: 0.5s ease-in-out;
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+
+  inset-inline-start: -10px;
+
+  animation: active 0.5s infinite alternate-reverse ease-in-out;
+}
 
 @keyframes active {
   0% {
@@ -21,6 +34,20 @@
   100% {
     inset-inline-start: -14px;
   }
+}
+
+.theme-menu__button::after {
+  content: '';
+
+  display: block;
+
+  inline-size: 0%;
+  block-size: 2px;
+  margin-top: 3px;
+
+  background-color: currentColor;
+
+  transition: inline-size 0.5s;
 }
 
 .card__like-button {
@@ -33,7 +60,7 @@
 
 .card__like-button:focus-visible {
   padding: 4px 6px;
-  
+
   box-shadow: 2px 2px 0 var(--color-accent, #00cc14);
   transition: 0.3s ease;
 }
@@ -50,13 +77,13 @@
 }
 
 .button--accent::before {
-  content: "";
+  content: '';
 
   inset: 0;
 
   block-size: 100%;
 
-  background-color: var(--color-accent, #00cc14);
+  background-color: var(--color-button, #00cc14);
 
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
@@ -72,8 +99,8 @@
 }
 
 .like-icon .contour {
-   transition: fill 0.1s linear;
- }
+  transition: fill 0.1s linear;
+}
 
 .like-icon .main-body {
   transition: fill 0.3s linear;
