@@ -4,8 +4,10 @@
 
   --color-accent: #00cc14;
   --color-button: #00cc14;
+  --color-text-button: #00cc14;
   --color_shadow: #000;
 
+  --background-item-color:#000;
   --background-color: #000;
   --background-gradient: linear-gradient(
     to bottom,
@@ -22,6 +24,7 @@
   --color-text-button: #d3d3d3;
   --color_shadow: #d3d3d3;
 
+  --background-item-color:#fff;
   --background-color: #d3d3d3;
   --background-gradient: linear-gradient(
     to bottom,
@@ -40,6 +43,7 @@
     --color-text-button: #d3d3d3;
     --color_shadow: #d3d3d3;
 
+    --background-item-color:#fff;
     --background-color: #d3d3d3;
     --background-gradient: linear-gradient(
       to bottom,

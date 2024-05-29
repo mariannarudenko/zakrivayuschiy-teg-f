@@ -1,4 +1,7 @@
-.page,
+.page {
+  background-color: var(--background-color, #000);
+}
+
 .header,
 .theme-menu__button,
 .card__paragraph,
@@ -7,7 +10,7 @@
 .footer__icon-button,
 .dialog,
 .dialog__button {
-  background-color: var(--background-color, #000);
+  background-color: var(--background-item-color, #000);
 }
 
 .page,
@@ -77,6 +80,7 @@
       --background-gradient,
       linear-gradient(to bottom, #007f0c 0.01%, #004306 100%)
     );
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -116,21 +120,22 @@
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
 }
 
-.header__title {
+.header__logo {
+  text-decoration: none;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__text {
+.header__title {
   text-align: center;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-.header__title,
+.header__logo,
 .button__text {
   line-height: 100%;
 }
 
-.header__text,
+.header__title,
 .theme-menu__button,
 .text--accent {
   text-transform: uppercase;
@@ -178,7 +183,8 @@
 .card__icon-button:focus,
 .card__like-button:focus,
 .button__text:focus,
-.footer__icon-button:focus {
+.footer__icon-button:focus,
+.dialog__button:focus {
   outline: none;
 }
 
@@ -242,6 +248,14 @@
     1px 0 var(--color_shadow, #000), 0 -1px var(--color_shadow, #000);
 
   opacity: 50%;
+}
+
+@supports((text-stroke: 1px var(--color_shadow, #000)) or (-webkit-text-stroke:1px var(--color_shadow, #000))) {
+  .card__watermark {
+    text-stroke: 1px var(--color_shadow, #000);
+    -webkit-text-stroke: 1px var(--color_shadow, #000);
+    text-shadow: none;
+  }
 }
 
 .card__image-blur {
@@ -324,6 +338,14 @@
   padding-inline-end: 25px;
 }
 
+.card__icon-button {
+  padding: 0;
+
+  max-block-size: 38px;
+
+  border: 2px solid transparent;
+}
+
 .button__text,
 .footer__icon-button {
   text-align: center;
@@ -348,15 +370,14 @@
   padding: 12.5px 16px;
 }
 
-.dialog {
-  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  padding: 30px;
-
-  color: var(--color-accent, #00cc14);
-}
-
 .dialog[open] {
   row-gap: 30px;
+
+  min-inline-size: 341px;
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding: 30px 35px;
+
+  color: var(--color-accent, #00cc14);
 }
 
 .dialog::backdrop {
@@ -368,7 +389,7 @@
 }
 
 .dialog__icon {
-  width: 80px;
+  width: 95px;
   height: 100%;
 
   align-self: center;
@@ -383,7 +404,7 @@
 }
 
 .dialog__button {
-  padding-block: 10px;
+  padding-block: 6px;
 }
 
 @media (width < 376px) {
